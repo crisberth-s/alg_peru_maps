@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perú Route Lab — Comparador de Algoritmos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080c14;
+      --surface: #0e1420;
+      --surface2: #141c2e;
+      --border: rgba(255,255,255,0.07);
+      --accent: #3b82f6;
+      --accent2: #10b981;
+      --accent3: #f59e0b;
+      --accent4: #ef4444;
+      --text: #e2e8f0;
+      --muted: #64748b;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html, body { width:100%; height:100%; overflow:hidden; font-family:'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+    #map { width:100%; height:100%; }
+    #sidebar {
+      position: absolute;
+      top:0; left:0;
+      width: 360px;
+      height: 100%;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(20px);
+      box-shadow: 4px 0 30px rgba(0,0,0,0.5);
+    }
+    #sidebar-header {
+      padding: 18px 20px 14px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    #sidebar-header h1 {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    #sidebar-header p {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+    #sidebar-body {
+      flex:1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+    .section {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .section-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .route-input { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+    .dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+    .dot.origin { background: var(--accent2); box-shadow:0 0 6px var(--accent2); }
+    .dot.dest   { background: var(--accent4); box-shadow:0 0 6px var(--accent4); }
+    .dot.wp     { background: var(--accent3); box-shadow:0 0 6px var(--accent3); }
+    .pac-input, select.pac-input {
+      flex:1; padding:8px 10px; border-radius:7px; border:1px solid var(--border);
+      background: rgba(255,255,255,0.04); color: var(--text); font-size:12px;
+      outline:none; transition: border-color 0.2s, background 0.2s;
+      appearance: none;
+    }
+    .pac-input::placeholder { color: var(--muted); }
+    .pac-input:focus { border-color: rgba(59,130,246,0.5); background: rgba(59,130,246,0.06); }
+    #waypoints-list { display:flex; flex-direction:column; gap:6px; margin-bottom:8px; }
+    .wp-row { display:flex; align-items:center; gap:6px; animation: slideIn 0.2s ease; }
+    @keyframes slideIn { from { opacity:0; transform:translateX(-8px); } to { opacity:1; transform:translateX(0); } }
+    .wp-remove {
+      width:22px; height:22px; border-radius:5px; border:1px solid var(--border);
+      background:transparent; color:var(--muted); font-size:14px; cursor:pointer;
+    }
+    .wp-remove:hover { color:var(--accent4); border-color:var(--accent4); }
+    #btn-add-wp {
+      width:100%; padding:7px; border-radius:7px; border:1px dashed var(--border);
+      background:transparent; color:var(--muted); font-size:12px; cursor:pointer;
+    }
+    #btn-add-wp:hover { color:var(--accent3); border-color:var(--accent3); }
+    .algo-checkboxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .algo-check {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+    }
+    .algo-check input[type="checkbox"] {
+      accent-color: var(--accent);
+      width: 14px;
+      height: 14px;
+    }
+    #btn-calcular {
+      width:100%; padding:11px; border-radius:9px; border:none;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color:#fff; font-size:13px; font-weight:600; cursor:pointer;
+    }
+    #btn-calcular:hover { opacity:0.88; }
+    #btn-calcular:active { transform:scale(0.98); }
+    #btn-calcular:disabled { opacity:0.35; cursor:not-allowed; }
+    #results-panel {
+      margin-top: 8px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .result-row {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr;
+      padding: 8px 10px;
+      font-size: 11px;
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+    }
+    .result-row.header {
+      font-weight: 700;
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    .color-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 6px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .color-dot.hidden {
+      opacity: 0.25;
+    }
+    .algo-name {
+      display: flex;
+      align-items: center;
+    }
+    #status-panel {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      z-index: 30;
+      background: rgba(14,20,32,0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-size: 12px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+      max-width: 340px;
+    }
+    #status-panel.visible { display: flex; }
+    .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,0.1);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      flex-shrink: 0;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .param-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; }
+    .param-label { font-size: 11px; color: #94a3b8; }
+    .param-value { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--accent); min-width: 32px; text-align: right; }
+    input[type="range"] { -webkit-appearance: none; width: 100px; height: 3px; border-radius: 2px; background: var(--border); }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); cursor: pointer; }
+  </style>
+</head>
+<body>
+<div id="map"></div>
+
+<div id="sidebar">
+  <div id="sidebar-header">
+    <h1>⚡ Perú Route Lab</h1>
+    <p>Plataforma de comparación de algoritmos de ruta</p>
+  </div>
+  <div id="sidebar-body">
+    <!-- Selector de modo -->
+    <div class="section">
+      <div class="section-title">🔄 Modo</div>
+      <select id="mode-selector" onchange="switchMode()" style="width:100%; padding:8px; border-radius:7px; background:rgba(255,255,255,0.04); color:var(--text); border:1px solid var(--border);">
+        <option value="osm">Calles reales (OSM)</option>
+        <option value="province">Provincias del Perú</option>
+      </select>
+    </div>
+
+    <!-- Contenedor dinámico de inputs de ruta -->
+    <div id="route-inputs-container"></div>
+
+    <!-- Selección de algoritmos -->
+    <div class="section">
+      <div class="section-title">🧠 Algoritmos</div>
+      <div class="algo-checkboxes" id="algo-checks"></div>
+    </div>
+
+    <!-- Parámetros AG (visible si se selecciona genético) -->
+    <div class="section" id="gen-config-section" style="display:none;">
+      <div class="section-title">⚙️ Parámetros AG</div>
+      <div class="param-row">
+        <span class="param-label">Generaciones</span>
+        <input type="range" id="r-gen" min="100" max="5000" value="1000" step="100" oninput="updateParam('gen', this.value)"/>
+        <span class="param-value" id="v-gen">1000</span>
+      </div>
+      <div class="param-row">
+        <span class="param-label">Población</span>
+        <input type="range" id="r-pop" min="50" max="1000" value="300" step="50" oninput="updateParam('pop', this.value)"/>
+        <span class="param-value" id="v-pop">300</span>
+      </div>
+      <div class="param-row">
+        <span class="param-label">Mutación</span>
+        <input type="range" id="r-mut" min="1" max="50" value="10" step="1" oninput="updateParam('mut', this.value)"/>
+        <span class="param-value" id="v-mut">10%</span>
+      </div>
+      <div class="param-row">
+        <span class="param-label">Élite</span>
+        <input type="range" id="r-eli" min="1" max="50" value="15" step="1" oninput="updateParam('eli', this.value)"/>
+        <span class="param-value" id="v-eli">15</span>
+      </div>
+    </div>
+
+    <button id="btn-calcular" onclick="requestComparison()">🔍 Comparar algoritmos</button>
+
+    <!-- Resultados -->
+    <div id="results-panel" style="display:none;">
+      <div class="section-title" style="margin-bottom:8px;">📊 Resultados</div>
+      <div class="result-row header">
+        <span>Algoritmo</span><span>Distancia</span><span>Tiempo</span><span>Nodos</span><span>Eficiencia</span>
+      </div>
+      <div id="results-body"></div>
+    </div>
+  </div>
+</div>
+
+<div id="status-panel">
+  <div class="spinner" id="spinner"></div>
+  <span id="status-text">Calculando...</span>
+</div>
+
+<script>
+  const GOOGLE_MAPS_KEY = "{{ gmaps_key }}";
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ gmaps_key }}&libraries=places&callback=initMap" async defer></script>
+<script>
+  // ======= ESTADO GLOBAL =======
+  let map;
+  let originPlace = null, destPlace = null;
+  let originMarker, destMarker;
+  let wpMarkers = [];
+  const waypointPlaces = [];
+  let currentPolylines = {};   // {algoName: google.maps.Polyline}
+  let currentMode = 'osm';
+  const provinceNames = [];
+
+  const ALGORITHM_COLORS = {
+    dijkstra: '#3b82f6',
+    astar: '#10b981',
+    greedy: '#f59e0b',
+    bfs: '#8b5cf6',
+    dfs: '#ec4899',
+    bellman_ford: '#06b6d4',
+    genetic: '#ef4444'
+  };
+
+  const ALL_ALGORITHMS = [
+    { id: 'dijkstra', label: 'Dijkstra' },
+    { id: 'astar', label: 'A*' },
+    { id: 'greedy', label: 'Voraz (Greedy)' },
+    { id: 'bfs', label: 'BFS' },
+    { id: 'dfs', label: 'DFS' },
+    { id: 'bellman_ford', label: 'Bellman-Ford' },
+    { id: 'genetic', label: 'Genético' },
+  ];
+
+  // ======= INICIALIZACIÓN =======
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: -9.19, lng: -75.0152 },
+      zoom: 6,
+      styles: darkMapStyle(),
+      zoomControl: true,
+      mapTypeControl: false,
+      streetViewControl: false,
+      fullscreenControl: false,
+    });
+    buildAlgorithmCheckboxes();
+    switchMode(); // carga inputs OSM por defecto
+  }
+
+  function buildAlgorithmCheckboxes() {
+    const container = document.getElementById('algo-checks');
+    ALL_ALGORITHMS.forEach(algo => {
+      const div = document.createElement('div');
+      div.className = 'algo-check';
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.id = `cb-${algo.id}`;
+      cb.value = algo.id;
+      cb.checked = algo.id === 'dijkstra';
+      if (algo.id === 'genetic') cb.addEventListener('change', toggleGeneticConfig);
+      const label = document.createElement('label');
+      label.htmlFor = `cb-${algo.id}`;
+      label.style.cursor = 'pointer';
+      label.textContent = algo.label;
+      div.appendChild(cb);
+      div.appendChild(label);
+      container.appendChild(div);
+    });
+    toggleGeneticConfig();
+  }
+
+  function toggleGeneticConfig() {
+    const checked = document.getElementById('cb-genetic')?.checked;
+    document.getElementById('gen-config-section').style.display = checked ? 'block' : 'none';
+  }
+
+  // ======= CAMBIO DE MODO =======
+  async function loadProvinceList() {
+    if (provinceNames.length > 0) return;
+    try {
+      const resp = await fetch('/api/provinces');
+      const data = await resp.json();
+      provinceNames.push(...data);
+    } catch (e) {
+      console.error("Error cargando provincias", e);
+    }
+  }
+
+  function switchMode() {
+    currentMode = document.getElementById('mode-selector').value;
+    renderRouteInputs();
+  }
+
+  function renderRouteInputs() {
+    const container = document.getElementById('route-inputs-container');
+    if (currentMode === 'osm') {
+      container.innerHTML = `
+        <div class="section">
+          <div class="section-title">📍 Ruta (OSM)</div>
+          <div class="route-input">
+            <div class="dot origin"></div>
+            <input id="input-origin" class="pac-input" placeholder="Origen..." autocomplete="off"/>
+          </div>
+          <div id="waypoints-list"></div>
+          <div class="route-input">
+            <div class="dot dest"></div>
+            <input id="input-dest" class="pac-input" placeholder="Destino..." autocomplete="off"/>
+          </div>
+          <button id="btn-add-wp" onclick="addWaypoint()">+ Ciudad intermedia</button>
+        </div>
+      `;
+      setTimeout(setupAutocomplete, 100);
+    } else {
+      loadProvinceList().then(() => {
+        const opts = provinceNames.map(n => `<option value="${n}">${n}</option>`).join('');
+        container.innerHTML = `
+          <div class="section">
+            <div class="section-title">📍 Ruta (Provincias)</div>
+            <div class="route-input">
+              <div class="dot origin"></div>
+              <select id="select-origin" class="pac-input">${opts}</select>
+            </div>
+            <div id="waypoints-list"></div>
+            <div class="route-input">
+              <div class="dot dest"></div>
+              <select id="select-dest" class="pac-input">${opts}</select>
+            </div>
+            <button id="btn-add-wp" onclick="addWaypointProvince()">+ Provincia intermedia</button>
+          </div>
+        `;
+        document.getElementById('waypoints-list').innerHTML = '';
+      });
+    }
+  }
+
+  // ======= MODO OSM: AUTOCOMPLETE =======
+  function setupAutocomplete() {
+    const opts = { componentRestrictions: { country: "pe" }, fields: ["geometry","name"] };
+    const acOrigin = new google.maps.places.Autocomplete(document.getElementById("input-origin"), opts);
+    acOrigin.addListener("place_changed", () => {
+      const p = acOrigin.getPlace();
+      if (!p.geometry) return;
+      originPlace = { lat: p.geometry.location.lat(), lng: p.geometry.location.lng(), name: p.name };
+      placeMarker('origin', originPlace);
+      fitAll();
+    });
+    const acDest = new google.maps.places.Autocomplete(document.getElementById("input-dest"), opts);
+    acDest.addListener("place_changed", () => {
+      const p = acDest.getPlace();
+      if (!p.geometry) return;
+      destPlace = { lat: p.geometry.location.lat(), lng: p.geometry.location.lng(), name: p.name };
+      placeMarker('dest', destPlace);
+      fitAll();
+    });
+  }
+
+  function addWaypoint() {
+    const idx = waypointPlaces.length;
+    waypointPlaces.push(null);
+    const list = document.getElementById("waypoints-list");
+    const row = document.createElement("div");
+    row.className = "wp-row";
+    row.innerHTML = `
+      <div class="dot wp"></div>
+      <input id="wp-input-${idx}" class="pac-input" placeholder="Ciudad intermedia..."/>
+      <button class="wp-remove" onclick="removeWaypoint(${idx})">×</button>
+    `;
+    list.appendChild(row);
+    const ac = new google.maps.places.Autocomplete(document.getElementById(`wp-input-${idx}`), { componentRestrictions: { country: "pe" }, fields: ["geometry","name"] });
+    ac.addListener("place_changed", () => {
+      const p = ac.getPlace();
+      if (!p.geometry) return;
+      waypointPlaces[idx] = p;
+      placeWpMarker(idx, p);
+      fitAll();
+    });
+  }
+
+  function removeWaypoint(idx) {
+    waypointPlaces[idx] = null;
+    const row = document.querySelector(`#waypoints-list > :nth-child(${idx+1})`);
+    if (row) row.remove();
+    if (wpMarkers[idx]) { wpMarkers[idx].setMap(null); wpMarkers[idx] = null; }
+  }
+
+  // ======= MODO PROVINCIAS: WAYPOINTS =======
+  function addWaypointProvince() {
+    const list = document.getElementById("waypoints-list");
+    const idx = list.children.length;
+    const row = document.createElement("div");
+    row.className = "wp-row";
+    row.id = `wp-row-prov-${idx}`;
+    const opts = provinceNames.map(n => `<option value="${n}">${n}</option>`).join('');
+    row.innerHTML = `
+      <div class="dot wp"></div>
+      <select id="wp-select-${idx}" class="pac-input">${opts}</select>
+      <button class="wp-remove" onclick="removeWaypointProvince(${idx})">×</button>
+    `;
+    list.appendChild(row);
+  }
+
+  function removeWaypointProvince(idx) {
+    const row = document.getElementById(`wp-row-prov-${idx}`);
+    if (row) row.remove();
+  }
+
+  // ======= MARCADORES (modo OSM) =======
+  function placeMarker(type, place) {
+    const pos = { lat: place.lat, lng: place.lng };
+    if (type === 'origin') {
+      if (originMarker) originMarker.setMap(null);
+      originMarker = new google.maps.Marker({ position: pos, map, title: place.name, icon: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png' });
+    } else {
+      if (destMarker) destMarker.setMap(null);
+      destMarker = new google.maps.Marker({ position: pos, map, title: place.name, icon: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png' });
+    }
+  }
+
+  function placeWpMarker(idx, place) {
+    if (wpMarkers[idx]) wpMarkers[idx].setMap(null);
+    wpMarkers[idx] = new google.maps.Marker({ position: { lat: place.geometry.location.lat(), lng: place.geometry.location.lng() }, map, title: place.name, icon: 'https://maps.google.com/mapfiles/ms/icons/yellow-dot.png' });
+  }
+
+  function fitAll() {
+    const bounds = new google.maps.LatLngBounds();
+    if (originPlace) bounds.extend({ lat: originPlace.lat, lng: originPlace.lng });
+    if (destPlace) bounds.extend({ lat: destPlace.lat, lng: destPlace.lng });
+    waypointPlaces.forEach(wp => { if (wp) bounds.extend({ lat: wp.geometry.location.lat(), lng: wp.geometry.location.lng() }); });
+    if (!bounds.isEmpty()) map.fitBounds(bounds, { top: 60, bottom: 60, left: 380, right: 60 });
+  }
+
+  // ======= PARÁMETROS AG =======
+  function updateParam(key, val) {
+    if (key === 'mut') { document.getElementById('v-mut').textContent = val + '%'; return; }
+    document.getElementById(`v-${key}`).textContent = val;
+  }
+
+  function getGeneticConfig() {
+    return {
+      generations: parseInt(document.getElementById('r-gen').value),
+      population_size: parseInt(document.getElementById('r-pop').value),
+      mutation_rate: parseInt(document.getElementById('r-mut').value) / 100,
+      elite_size: parseInt(document.getElementById('r-eli').value),
+    };
+  }
+
+  function getSelectedAlgorithms() {
+    return ALL_ALGORITHMS.filter(a => document.getElementById(`cb-${a.id}`).checked).map(a => a.id);
+  }
+
+  // ======= COMPARACIÓN =======
+  async function requestComparison() {
+    let payload;
+    if (currentMode === 'province') {
+      const originName = document.getElementById('select-origin').value;
+      const destName = document.getElementById('select-dest').value;
+      const waypointSelects = document.querySelectorAll('[id^="wp-select-"]');
+      const waypoints = Array.from(waypointSelects).map(sel => ({ name: sel.value }));
+      if (!originName || !destName) {
+        showStatus("Selecciona provincia de origen y destino.", "error");
+        return;
+      }
+      payload = {
+        mode: 'province',
+        origin_name: originName,
+        dest_name: destName,
+        waypoints: waypoints,
+        algorithms: getSelectedAlgorithms(),
+        genetic_config: getGeneticConfig()
+      };
+    } else {
+      if (!originPlace || !destPlace) {
+        showStatus("Selecciona origen y destino en el mapa.", "error");
+        return;
+      }
+      payload = {
+        mode: 'osm',
+        origin_lat: originPlace.lat,
+        origin_lon: originPlace.lng,
+        dest_lat: destPlace.lat,
+        dest_lon: destPlace.lng,
+        origin_name: originPlace.name,
+        dest_name: destPlace.name,
+        waypoints: waypointPlaces.filter(Boolean).map(p => ({
+          lat: p.geometry.location.lat(),
+          lon: p.geometry.location.lng(),
+          name: p.name
+        })),
+        algorithms: getSelectedAlgorithms(),
+        genetic_config: getGeneticConfig()
+      };
+    }
+
+    document.getElementById("btn-calcular").disabled = true;
+    document.getElementById("results-panel").style.display = 'none';
+    showStatus("Ejecutando algoritmos...", "loading");
+    clearPolylines();
+
+    try {
+      const resp = await fetch('/api/routes', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(payload)
+      });
+      const data = await resp.json();
+      if (!data.success) {
+        showStatus(data.error || "Error del servidor", "error");
+      } else {
+        displayResults(data.algorithms, payload.algorithms);
+        showStatus("Comparación completada", "success");
+      }
+    } catch (err) {
+      showStatus("Error de conexión con el backend.", "error");
+    } finally {
+      document.getElementById("btn-calcular").disabled = false;
+    }
+  }
+
+  function clearPolylines() {
+    for (let key in currentPolylines) {
+      currentPolylines[key].setMap(null);
+    }
+    currentPolylines = {};
+  }
+
+  function togglePolyline(algoName) {
+    const poly = currentPolylines[algoName];
+    if (!poly) return;
+    if (poly.getMap() === null) {
+      poly.setMap(map);
+    } else {
+      poly.setMap(null);
+    }
+    const dot = document.querySelector(`.color-dot[data-algo="${algoName}"]`);
+    if (dot) dot.classList.toggle('hidden');
+  }
+
+  function displayResults(results, order) {
+    const body = document.getElementById("results-body");
+    body.innerHTML = '';
+
+    order.forEach(algoName => {
+      const res = results[algoName];
+      if (!res) return;
+
+      // Dibujar polilínea si hay coordenadas
+      if (res.coordinates && res.coordinates.length > 1) {
+        const path = res.coordinates.map(c => ({ lat: c[0], lng: c[1] }));
+        const poly = new google.maps.Polyline({
+          path,
+          geodesic: true,
+          strokeColor: ALGORITHM_COLORS[algoName] || '#ffffff',
+          strokeOpacity: 0.9,
+          strokeWeight: 4,
+          map
+        });
+        currentPolylines[algoName] = poly;
+      }
+
+      // Fila de resultados
+      const row = document.createElement('div');
+      row.className = 'result-row';
+
+      // Mostrar 0 correctamente
+      const distText = res.distance_km != null ? res.distance_km.toFixed(2) + ' km' : '—';
+      const timeText = res.time != null ? res.time.toFixed(3) + ' s' : '—';
+      const nodesText = res.nodes_visited != null ? res.nodes_visited : '—';
+      const efficiencyText = res.error ? 'Error' : '✓';
+
+      row.innerHTML = `
+        <div class="algo-name">
+          <span class="color-dot" style="background:${ALGORITHM_COLORS[algoName] || '#ccc'};" data-algo="${algoName}" onclick="togglePolyline('${algoName}')"></span>
+          ${algoName}
+        </div>
+        <span>${res.error ? '❌' : distText}</span>
+        <span>${timeText}</span>
+        <span>${nodesText}</span>
+        <span>${efficiencyText}</span>
+      `;
+      body.appendChild(row);
+    });
+
+    document.getElementById("results-panel").style.display = 'block';
+
+    // Ajustar vista del mapa
+    const bounds = new google.maps.LatLngBounds();
+    for (let key in currentPolylines) {
+      currentPolylines[key].getPath().forEach(p => bounds.extend(p));
+    }
+    if (currentMode === 'osm') {
+      if (originPlace) bounds.extend({ lat: originPlace.lat, lng: originPlace.lng });
+      if (destPlace) bounds.extend({ lat: destPlace.lat, lng: destPlace.lng });
+    }
+    if (!bounds.isEmpty()) map.fitBounds(bounds, { top: 60, bottom: 60, left: 380, right: 60 });
+  }
+
+  function showStatus(msg, type) {
+    const panel = document.getElementById("status-panel");
+    const text = document.getElementById("status-text");
+    const spinner = document.getElementById("spinner");
+    panel.className = "visible";
+    text.textContent = msg;
+    spinner.style.display = type === 'loading' ? 'block' : 'none';
+    panel.style.borderColor = type === 'error' ? 'rgba(239,68,68,0.4)' : type === 'success' ? 'rgba(16,185,129,0.4)' : '';
+  }
+
+  function darkMapStyle() {
+    return [
+      { elementType: "geometry", stylers: [{ color: "#0d1117" }] },
+      { elementType: "labels.text.stroke", stylers: [{ color: "#0d1117" }] },
+      { elementType: "labels.text.fill", stylers: [{ color: "#6e7f8d" }] },
+      { featureType: "road", elementType: "geometry", stylers: [{ color: "#1e2d3e" }] },
+      { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#1a3a6e" }] },
+      { featureType: "water", elementType: "geometry", stylers: [{ color: "#0a1929" }] },
+      { featureType: "poi", stylers: [{ visibility: "off" }] },
+      { featureType: "transit", stylers: [{ visibility: "off" }] },
+      { featureType: "administrative.country", elementType: "geometry.stroke", stylers: [{ color: "#2a3a5a" }] },
+    ];
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+flask==3.0.0
+flask-socketio==5.3.4
+flask-cors==4.0.0
+osmnx==1.8.1
+networkx==3.2.1
+geopy==2.4.1
+numpy==1.26.3
+eventlet==0.34.2

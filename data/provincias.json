@@ -1,0 +1,2415 @@
+[
+  {
+    "name": "Bagua",
+    "lat": -5.077227760012945,
+    "lon": -78.40332963100676,
+    "neighbors": [
+      "Condorcanqui",
+      "Utcubamba",
+      "Jaén",
+      "San Ignacio"
+    ]
+  },
+  {
+    "name": "Bongará",
+    "lat": -5.681544463292247,
+    "lon": -77.86633812913234,
+    "neighbors": [
+      "Chachapoyas",
+      "Condorcanqui",
+      "Luya",
+      "Utcubamba",
+      "Alto Amazonas",
+      "Moyobamba",
+      "Rioja"
+    ]
+  },
+  {
+    "name": "Chachapoyas",
+    "lat": -6.437545650642802,
+    "lon": -77.77429436723317,
+    "neighbors": [
+      "Bongará",
+      "Luya",
+      "Rodríguez de Mendoza",
+      "Celendín",
+      "Bolívar",
+      "Mariscal Cáceres",
+      "Rioja"
+    ]
+  },
+  {
+    "name": "Condorcanqui",
+    "lat": -4.173306972654204,
+    "lon": -78.03389266264449,
+    "neighbors": [
+      "Bagua",
+      "Bongará",
+      "Utcubamba",
+      "Alto Amazonas"
+    ]
+  },
+  {
+    "name": "Luya",
+    "lat": -6.307564624402983,
+    "lon": -78.09616329194094,
+    "neighbors": [
+      "Bongará",
+      "Chachapoyas",
+      "Utcubamba",
+      "Celendín",
+      "Chota"
+    ]
+  },
+  {
+    "name": "Rodríguez de Mendoza",
+    "lat": -6.3766780830554275,
+    "lon": -77.44743861041941,
+    "neighbors": [
+      "Chachapoyas",
+      "Huallaga",
+      "Mariscal Cáceres",
+      "Moyobamba",
+      "Rioja"
+    ]
+  },
+  {
+    "name": "Utcubamba",
+    "lat": -5.761189639176884,
+    "lon": -78.32145479546821,
+    "neighbors": [
+      "Bagua",
+      "Bongará",
+      "Condorcanqui",
+      "Luya",
+      "Chota",
+      "Cutervo",
+      "Jaén"
+    ]
+  },
+  {
+    "name": "Aija",
+    "lat": -9.784301683220141,
+    "lon": -77.67733401727156,
+    "neighbors": [
+      "Huaraz",
+      "Huarmey",
+      "Recuay"
+    ]
+  },
+  {
+    "name": "Antonio Raymondi",
+    "lat": -9.131926239640757,
+    "lon": -77.05329740397544,
+    "neighbors": [
+      "Carlos Fermin Fitzcarrald",
+      "Huari",
+      "Huacaybamba"
+    ]
+  },
+  {
+    "name": "Asunción",
+    "lat": -9.189847853467423,
+    "lon": -77.39875346836276,
+    "neighbors": [
+      "Carhuaz",
+      "Carlos Fermin Fitzcarrald",
+      "Huari",
+      "Yungay"
+    ]
+  },
+  {
+    "name": "Bolognesi",
+    "lat": -10.106555035464387,
+    "lon": -77.15052491001111,
+    "neighbors": [
+      "Huari",
+      "Huarmey",
+      "Ocros",
+      "Recuay",
+      "Dos de Mayo",
+      "Huamalíes",
+      "Lauricocha",
+      "Barranca",
+      "Cajatambo"
+    ]
+  },
+  {
+    "name": "Carhuaz",
+    "lat": -9.290575273257932,
+    "lon": -77.56893328480544,
+    "neighbors": [
+      "Asunción",
+      "Huaraz",
+      "Huari",
+      "Yungay"
+    ]
+  },
+  {
+    "name": "Carlos Fermin Fitzcarrald",
+    "lat": -9.044206459877266,
+    "lon": -77.24233505321483,
+    "neighbors": [
+      "Antonio Raymondi",
+      "Asunción",
+      "Huari",
+      "Mariscal Luzuriaga",
+      "Yungay",
+      "Huacaybamba"
+    ]
+  },
+  {
+    "name": "Casma",
+    "lat": -9.485237050822116,
+    "lon": -78.18692569527292,
+    "neighbors": [
+      "Huaraz",
+      "Huarmey",
+      "Santa",
+      "Yungay"
+    ]
+  },
+  {
+    "name": "Corongo",
+    "lat": -8.567614239524977,
+    "lon": -77.88192679690538,
+    "neighbors": [
+      "Huaylas",
+      "Pallasca",
+      "Santa",
+      "Sihuas"
+    ]
+  },
+  {
+    "name": "Huaraz",
+    "lat": -9.561182476716143,
+    "lon": -77.64620337704086,
+    "neighbors": [
+      "Aija",
+      "Carhuaz",
+      "Casma",
+      "Huari",
+      "Huarmey",
+      "Recuay",
+      "Yungay"
+    ]
+  },
+  {
+    "name": "Huari",
+    "lat": -9.433588553689836,
+    "lon": -77.08189744231915,
+    "neighbors": [
+      "Antonio Raymondi",
+      "Asunción",
+      "Bolognesi",
+      "Carhuaz",
+      "Carlos Fermin Fitzcarrald",
+      "Huaraz",
+      "Recuay",
+      "Huacaybamba",
+      "Huamalíes"
+    ]
+  },
+  {
+    "name": "Huarmey",
+    "lat": -10.094209189304236,
+    "lon": -77.9274846894724,
+    "neighbors": [
+      "Aija",
+      "Bolognesi",
+      "Casma",
+      "Huaraz",
+      "Recuay",
+      "Barranca"
+    ]
+  },
+  {
+    "name": "Huaylas",
+    "lat": -8.94355874778747,
+    "lon": -77.82831906355544,
+    "neighbors": [
+      "Corongo",
+      "Pomabamba",
+      "Santa",
+      "Sihuas",
+      "Yungay"
+    ]
+  },
+  {
+    "name": "Mariscal Luzuriaga",
+    "lat": -8.870065088428031,
+    "lon": -77.34027327452101,
+    "neighbors": [
+      "Carlos Fermin Fitzcarrald",
+      "Pomabamba",
+      "Yungay",
+      "Huacaybamba",
+      "Marañón"
+    ]
+  },
+  {
+    "name": "Ocros",
+    "lat": -10.486476350690037,
+    "lon": -77.4302302140182,
+    "neighbors": [
+      "Bolognesi",
+      "Barranca",
+      "Cajatambo",
+      "Huaura"
+    ]
+  },
+  {
+    "name": "Pallasca",
+    "lat": -8.317115269090703,
+    "lon": -77.90131324943052,
+    "neighbors": [
+      "Corongo",
+      "Santa",
+      "Sihuas",
+      "Pataz",
+      "Santiago de Chuco",
+      "Viru"
+    ]
+  },
+  {
+    "name": "Pomabamba",
+    "lat": -8.720573381444623,
+    "lon": -77.43561655280048,
+    "neighbors": [
+      "Huaylas",
+      "Mariscal Luzuriaga",
+      "Sihuas",
+      "Yungay",
+      "Marañón",
+      "Pataz"
+    ]
+  },
+  {
+    "name": "Recuay",
+    "lat": -9.950859948821293,
+    "lon": -77.42612530785632,
+    "neighbors": [
+      "Aija",
+      "Bolognesi",
+      "Huaraz",
+      "Huari",
+      "Huarmey"
+    ]
+  },
+  {
+    "name": "Santa",
+    "lat": -8.969583463348648,
+    "lon": -78.28919479620535,
+    "neighbors": [
+      "Casma",
+      "Corongo",
+      "Huaylas",
+      "Pallasca",
+      "Yungay",
+      "Santiago de Chuco",
+      "Viru"
+    ]
+  },
+  {
+    "name": "Sihuas",
+    "lat": -8.484291648672121,
+    "lon": -77.5851581962014,
+    "neighbors": [
+      "Corongo",
+      "Huaylas",
+      "Pallasca",
+      "Pomabamba",
+      "Pataz"
+    ]
+  },
+  {
+    "name": "Yungay",
+    "lat": -9.201334721399336,
+    "lon": -77.74284371614627,
+    "neighbors": [
+      "Asunción",
+      "Carhuaz",
+      "Carlos Fermin Fitzcarrald",
+      "Casma",
+      "Huaraz",
+      "Huaylas",
+      "Mariscal Luzuriaga",
+      "Pomabamba",
+      "Santa"
+    ]
+  },
+  {
+    "name": "Abancay",
+    "lat": -13.732696910555468,
+    "lon": -72.83449694459723,
+    "neighbors": [
+      "Andahuaylas",
+      "Antabamba",
+      "Aymaraes",
+      "Cotabambas",
+      "Grau",
+      "Anta",
+      "La Convención"
+    ]
+  },
+  {
+    "name": "Andahuaylas",
+    "lat": -13.829122034514102,
+    "lon": -73.39265355476078,
+    "neighbors": [
+      "Abancay",
+      "Aymaraes",
+      "Chincheros",
+      "La Mar",
+      "Lucanas",
+      "Parinacochas",
+      "Sucre",
+      "Vilcas Huamán",
+      "La Convención"
+    ]
+  },
+  {
+    "name": "Antabamba",
+    "lat": -14.437116785730359,
+    "lon": -72.73670431178624,
+    "neighbors": [
+      "Abancay",
+      "Aymaraes",
+      "Cotabambas",
+      "Grau",
+      "La Unión",
+      "Parinacochas",
+      "Chumbivilcas"
+    ]
+  },
+  {
+    "name": "Aymaraes",
+    "lat": -14.34102296679775,
+    "lon": -73.2477497112919,
+    "neighbors": [
+      "Abancay",
+      "Andahuaylas",
+      "Antabamba",
+      "Parinacochas"
+    ]
+  },
+  {
+    "name": "Chincheros",
+    "lat": -13.471436533326962,
+    "lon": -73.67020846694521,
+    "neighbors": [
+      "Andahuaylas",
+      "Huamanga",
+      "La Mar",
+      "Vilcas Huamán"
+    ]
+  },
+  {
+    "name": "Cotabambas",
+    "lat": -14.018468545576596,
+    "lon": -72.26991926505337,
+    "neighbors": [
+      "Abancay",
+      "Antabamba",
+      "Grau",
+      "Anta",
+      "Chumbivilcas",
+      "Paruro"
+    ]
+  },
+  {
+    "name": "Grau",
+    "lat": -14.060991268060814,
+    "lon": -72.6225686906685,
+    "neighbors": [
+      "Abancay",
+      "Antabamba",
+      "Cotabambas"
+    ]
+  },
+  {
+    "name": "Arequipa",
+    "lat": -16.33880971051569,
+    "lon": -71.59917790280159,
+    "neighbors": [
+      "Camaná",
+      "Castilla",
+      "Caylloma",
+      "Islay",
+      "General Sánchez Cerro",
+      "San Román"
+    ]
+  },
+  {
+    "name": "Camaná",
+    "lat": -16.41667908556988,
+    "lon": -72.75013944984099,
+    "neighbors": [
+      "Arequipa",
+      "Caravelí",
+      "Castilla",
+      "Condesuyos",
+      "Islay"
+    ]
+  },
+  {
+    "name": "Caravelí",
+    "lat": -15.68884447514303,
+    "lon": -73.96396169353963,
+    "neighbors": [
+      "Camaná",
+      "Condesuyos",
+      "La Unión",
+      "Lucanas",
+      "Parinacochas",
+      "Paucar del Sara Sara",
+      "Nazca"
+    ]
+  },
+  {
+    "name": "Castilla",
+    "lat": -15.656348716300757,
+    "lon": -72.31838660971653,
+    "neighbors": [
+      "Arequipa",
+      "Camaná",
+      "Caylloma",
+      "Condesuyos"
+    ]
+  },
+  {
+    "name": "Caylloma",
+    "lat": -15.576204424117378,
+    "lon": -71.58224758459225,
+    "neighbors": [
+      "Arequipa",
+      "Castilla",
+      "Condesuyos",
+      "Chumbivilcas",
+      "Espinar",
+      "Lampa",
+      "San Román"
+    ]
+  },
+  {
+    "name": "Condesuyos",
+    "lat": -15.597199789588469,
+    "lon": -72.73087862155663,
+    "neighbors": [
+      "Camaná",
+      "Caravelí",
+      "Castilla",
+      "Caylloma",
+      "La Unión",
+      "Chumbivilcas"
+    ]
+  },
+  {
+    "name": "Islay",
+    "lat": -16.961130578530874,
+    "lon": -71.72156708225191,
+    "neighbors": [
+      "Arequipa",
+      "Camaná",
+      "General Sánchez Cerro",
+      "Ilo",
+      "Mariscal Nieto"
+    ]
+  },
+  {
+    "name": "La Unión",
+    "lat": -15.065330228070893,
+    "lon": -72.80419780636042,
+    "neighbors": [
+      "Antabamba",
+      "Caravelí",
+      "Condesuyos",
+      "Parinacochas",
+      "Paucar del Sara Sara",
+      "Chumbivilcas"
+    ]
+  },
+  {
+    "name": "Cangallo",
+    "lat": -13.499462847826946,
+    "lon": -74.48694169217302,
+    "neighbors": [
+      "Huamanga",
+      "Victor Fajardo",
+      "Vilcas Huamán",
+      "Huaytara"
+    ]
+  },
+  {
+    "name": "Huamanga",
+    "lat": -13.271136598586313,
+    "lon": -74.23022281131902,
+    "neighbors": [
+      "Chincheros",
+      "Cangallo",
+      "Huanta",
+      "La Mar",
+      "Vilcas Huamán",
+      "Angaraes",
+      "Huaytara"
+    ]
+  },
+  {
+    "name": "Huanca Sancos",
+    "lat": -13.94389144577073,
+    "lon": -74.46064382715788,
+    "neighbors": [
+      "Lucanas",
+      "Victor Fajardo",
+      "Huaytara"
+    ]
+  },
+  {
+    "name": "Huanta",
+    "lat": -12.565402235945951,
+    "lon": -74.1745809852509,
+    "neighbors": [
+      "Huamanga",
+      "La Mar",
+      "La Convención",
+      "Acobamba",
+      "Angaraes",
+      "Churcampa",
+      "Tayacaja",
+      "Satipo"
+    ]
+  },
+  {
+    "name": "La Mar",
+    "lat": -13.04401798310798,
+    "lon": -73.725948244154,
+    "neighbors": [
+      "Andahuaylas",
+      "Chincheros",
+      "Huamanga",
+      "Huanta",
+      "La Convención"
+    ]
+  },
+  {
+    "name": "Lucanas",
+    "lat": -14.616036855182294,
+    "lon": -74.34597295820305,
+    "neighbors": [
+      "Andahuaylas",
+      "Caravelí",
+      "Huanca Sancos",
+      "Parinacochas",
+      "Sucre",
+      "Victor Fajardo",
+      "Huaytara",
+      "Nazca",
+      "Palpa"
+    ]
+  },
+  {
+    "name": "Parinacochas",
+    "lat": -15.031791425855328,
+    "lon": -73.63484799630487,
+    "neighbors": [
+      "Andahuaylas",
+      "Antabamba",
+      "Aymaraes",
+      "Caravelí",
+      "La Unión",
+      "Lucanas",
+      "Paucar del Sara Sara"
+    ]
+  },
+  {
+    "name": "Paucar del Sara Sara",
+    "lat": -15.122690695928105,
+    "lon": -73.26198001892357,
+    "neighbors": [
+      "Caravelí",
+      "La Unión",
+      "Parinacochas"
+    ]
+  },
+  {
+    "name": "Sucre",
+    "lat": -14.124700663320253,
+    "lon": -73.73208339108281,
+    "neighbors": [
+      "Andahuaylas",
+      "Lucanas",
+      "Victor Fajardo",
+      "Vilcas Huamán"
+    ]
+  },
+  {
+    "name": "Victor Fajardo",
+    "lat": -13.787363814654745,
+    "lon": -74.24896813317972,
+    "neighbors": [
+      "Cangallo",
+      "Huanca Sancos",
+      "Lucanas",
+      "Sucre",
+      "Vilcas Huamán",
+      "Huaytara"
+    ]
+  },
+  {
+    "name": "Vilcas Huamán",
+    "lat": -13.654207185147563,
+    "lon": -73.89905307780212,
+    "neighbors": [
+      "Andahuaylas",
+      "Chincheros",
+      "Cangallo",
+      "Huamanga",
+      "Sucre",
+      "Victor Fajardo"
+    ]
+  },
+  {
+    "name": "Cajabamba",
+    "lat": -7.540307348220653,
+    "lon": -78.09893002854893,
+    "neighbors": [
+      "Cajamarca",
+      "San Marcos",
+      "Bolívar",
+      "Gran Chimú",
+      "Otuzco",
+      "Sánchez Carrión"
+    ]
+  },
+  {
+    "name": "Cajamarca",
+    "lat": -7.197758821331928,
+    "lon": -78.46855423792094,
+    "neighbors": [
+      "Cajabamba",
+      "Celendín",
+      "Contumazá",
+      "Hualgayoc",
+      "San Marcos",
+      "San Pablo",
+      "Gran Chimú"
+    ]
+  },
+  {
+    "name": "Celendín",
+    "lat": -6.80729388508732,
+    "lon": -78.20414249931096,
+    "neighbors": [
+      "Chachapoyas",
+      "Luya",
+      "Cajamarca",
+      "Chota",
+      "Hualgayoc",
+      "San Marcos",
+      "Bolívar"
+    ]
+  },
+  {
+    "name": "Chota",
+    "lat": -6.437642114888789,
+    "lon": -78.86262856301344,
+    "neighbors": [
+      "Luya",
+      "Utcubamba",
+      "Celendín",
+      "Cutervo",
+      "Hualgayoc",
+      "Santa Cruz",
+      "Chiclayo",
+      "Ferreñafe"
+    ]
+  },
+  {
+    "name": "Contumazá",
+    "lat": -7.3556174212793,
+    "lon": -78.97953282896667,
+    "neighbors": [
+      "Cajamarca",
+      "San Miguel",
+      "San Pablo",
+      "Ascope",
+      "Chepén",
+      "Gran Chimú",
+      "Pacasmayo"
+    ]
+  },
+  {
+    "name": "Cutervo",
+    "lat": -6.173971505658209,
+    "lon": -78.8391331356601,
+    "neighbors": [
+      "Utcubamba",
+      "Chota",
+      "Jaén",
+      "Ferreñafe"
+    ]
+  },
+  {
+    "name": "Hualgayoc",
+    "lat": -6.7101055217392975,
+    "lon": -78.5457756050439,
+    "neighbors": [
+      "Cajamarca",
+      "Celendín",
+      "Chota",
+      "San Miguel",
+      "San Pablo",
+      "Santa Cruz"
+    ]
+  },
+  {
+    "name": "Jaén",
+    "lat": -5.7109212040332835,
+    "lon": -79.00229592376887,
+    "neighbors": [
+      "Bagua",
+      "Utcubamba",
+      "Cutervo",
+      "San Ignacio",
+      "Ferreñafe",
+      "Lambayeque",
+      "Huancabamba"
+    ]
+  },
+  {
+    "name": "San Ignacio",
+    "lat": -5.130890696431617,
+    "lon": -78.94934114683174,
+    "neighbors": [
+      "Bagua",
+      "Jaén",
+      "Huancabamba"
+    ]
+  },
+  {
+    "name": "San Marcos",
+    "lat": -7.28256474025235,
+    "lon": -78.0596905330614,
+    "neighbors": [
+      "Cajabamba",
+      "Cajamarca",
+      "Celendín",
+      "Bolívar"
+    ]
+  },
+  {
+    "name": "San Miguel",
+    "lat": -6.977650335850846,
+    "lon": -78.99775909018244,
+    "neighbors": [
+      "Contumazá",
+      "Hualgayoc",
+      "San Pablo",
+      "Santa Cruz",
+      "Chepén",
+      "Chiclayo"
+    ]
+  },
+  {
+    "name": "San Pablo",
+    "lat": -7.07471562655205,
+    "lon": -78.74914572532953,
+    "neighbors": [
+      "Cajamarca",
+      "Contumazá",
+      "Hualgayoc",
+      "San Miguel"
+    ]
+  },
+  {
+    "name": "Santa Cruz",
+    "lat": -6.684078001480745,
+    "lon": -78.98249046145195,
+    "neighbors": [
+      "Chota",
+      "Hualgayoc",
+      "San Miguel",
+      "Chiclayo"
+    ]
+  },
+  {
+    "name": "Callao",
+    "lat": -11.954608750588887,
+    "lon": -77.13604195969921,
+    "neighbors": [
+      "Lima"
+    ]
+  },
+  {
+    "name": "Acomayo",
+    "lat": -13.951678979978656,
+    "lon": -71.65472884103586,
+    "neighbors": [
+      "Canas",
+      "Canchis",
+      "Chumbivilcas",
+      "Paruro",
+      "Quispicanchi"
+    ]
+  },
+  {
+    "name": "Anta",
+    "lat": -13.489130084209254,
+    "lon": -72.36704824161957,
+    "neighbors": [
+      "Abancay",
+      "Cotabambas",
+      "Cusco",
+      "La Convención",
+      "Paruro",
+      "Urubamba"
+    ]
+  },
+  {
+    "name": "Calca",
+    "lat": -12.982354550127289,
+    "lon": -72.03638857463295,
+    "neighbors": [
+      "Cusco",
+      "La Convención",
+      "Paucartambo",
+      "Quispicanchi",
+      "Urubamba",
+      "Manu"
+    ]
+  },
+  {
+    "name": "Canas",
+    "lat": -14.439414414924501,
+    "lon": -71.34379814088098,
+    "neighbors": [
+      "Acomayo",
+      "Canchis",
+      "Chumbivilcas",
+      "Espinar",
+      "Melgar"
+    ]
+  },
+  {
+    "name": "Canchis",
+    "lat": -14.082851629052936,
+    "lon": -71.12653002561494,
+    "neighbors": [
+      "Acomayo",
+      "Canas",
+      "Quispicanchi",
+      "Carabaya",
+      "Melgar"
+    ]
+  },
+  {
+    "name": "Chumbivilcas",
+    "lat": -14.463829780452905,
+    "lon": -72.01134039692903,
+    "neighbors": [
+      "Antabamba",
+      "Cotabambas",
+      "Caylloma",
+      "Condesuyos",
+      "La Unión",
+      "Acomayo",
+      "Canas",
+      "Espinar",
+      "Paruro"
+    ]
+  },
+  {
+    "name": "Cusco",
+    "lat": -13.551341663011213,
+    "lon": -71.98149081766103,
+    "neighbors": [
+      "Anta",
+      "Calca",
+      "Paruro",
+      "Quispicanchi",
+      "Urubamba"
+    ]
+  },
+  {
+    "name": "Espinar",
+    "lat": -14.90439695646341,
+    "lon": -71.38068053632674,
+    "neighbors": [
+      "Caylloma",
+      "Canas",
+      "Chumbivilcas",
+      "Lampa",
+      "Melgar"
+    ]
+  },
+  {
+    "name": "La Convención",
+    "lat": -12.34961550918921,
+    "lon": -72.91524143659117,
+    "neighbors": [
+      "Abancay",
+      "Andahuaylas",
+      "Huanta",
+      "La Mar",
+      "Anta",
+      "Calca",
+      "Urubamba",
+      "Satipo",
+      "Manu",
+      "Atalaya"
+    ]
+  },
+  {
+    "name": "Paruro",
+    "lat": -13.884322679711563,
+    "lon": -71.91621329922438,
+    "neighbors": [
+      "Cotabambas",
+      "Acomayo",
+      "Anta",
+      "Chumbivilcas",
+      "Cusco",
+      "Quispicanchi"
+    ]
+  },
+  {
+    "name": "Paucartambo",
+    "lat": -13.170424810409596,
+    "lon": -71.50572029058594,
+    "neighbors": [
+      "Calca",
+      "Quispicanchi",
+      "Manu"
+    ]
+  },
+  {
+    "name": "Quispicanchi",
+    "lat": -13.499246692156959,
+    "lon": -71.01928522658653,
+    "neighbors": [
+      "Acomayo",
+      "Calca",
+      "Canchis",
+      "Cusco",
+      "Paruro",
+      "Paucartambo",
+      "Manu",
+      "Tambopata",
+      "Carabaya"
+    ]
+  },
+  {
+    "name": "Urubamba",
+    "lat": -13.257242717179828,
+    "lon": -72.29255259674598,
+    "neighbors": [
+      "Anta",
+      "Calca",
+      "Cusco",
+      "La Convención"
+    ]
+  },
+  {
+    "name": "Acobamba",
+    "lat": -12.792339337433168,
+    "lon": -74.58298120952978,
+    "neighbors": [
+      "Huanta",
+      "Angaraes",
+      "Churcampa",
+      "Huancavelica"
+    ]
+  },
+  {
+    "name": "Angaraes",
+    "lat": -13.046396288566598,
+    "lon": -74.626433731654,
+    "neighbors": [
+      "Huamanga",
+      "Huanta",
+      "Acobamba",
+      "Huancavelica",
+      "Huaytara"
+    ]
+  },
+  {
+    "name": "Castrovirreyna",
+    "lat": -13.144968692217182,
+    "lon": -75.40621863757632,
+    "neighbors": [
+      "Huancavelica",
+      "Huaytara",
+      "Chincha",
+      "Pisco",
+      "Yauyos"
+    ]
+  },
+  {
+    "name": "Churcampa",
+    "lat": -12.628294093003161,
+    "lon": -74.4935644179582,
+    "neighbors": [
+      "Huanta",
+      "Acobamba",
+      "Huancavelica",
+      "Tayacaja"
+    ]
+  },
+  {
+    "name": "Huancavelica",
+    "lat": -12.723325827944988,
+    "lon": -75.09095278043678,
+    "neighbors": [
+      "Acobamba",
+      "Angaraes",
+      "Castrovirreyna",
+      "Churcampa",
+      "Huaytara",
+      "Tayacaja",
+      "Huancayo",
+      "Yauyos"
+    ]
+  },
+  {
+    "name": "Huaytara",
+    "lat": -13.655973719231934,
+    "lon": -75.09249284118744,
+    "neighbors": [
+      "Cangallo",
+      "Huamanga",
+      "Huanca Sancos",
+      "Lucanas",
+      "Victor Fajardo",
+      "Angaraes",
+      "Castrovirreyna",
+      "Huancavelica",
+      "Ica",
+      "Palpa",
+      "Pisco"
+    ]
+  },
+  {
+    "name": "Tayacaja",
+    "lat": -12.27460338363676,
+    "lon": -74.76892630678087,
+    "neighbors": [
+      "Huanta",
+      "Churcampa",
+      "Huancavelica",
+      "Huancayo",
+      "Satipo"
+    ]
+  },
+  {
+    "name": "Ambo",
+    "lat": -10.228494173873115,
+    "lon": -76.23375138864074,
+    "neighbors": [
+      "Huenuco",
+      "Lauricocha",
+      "Pachitea",
+      "Daniel Alcides Carrión",
+      "Pasco"
+    ]
+  },
+  {
+    "name": "Dos de Mayo",
+    "lat": -9.636772855135323,
+    "lon": -76.61074410786257,
+    "neighbors": [
+      "Bolognesi",
+      "Huamalíes",
+      "Huenuco",
+      "Lauricocha",
+      "Leoncio Prado",
+      "Yarowilca"
+    ]
+  },
+  {
+    "name": "Huacaybamba",
+    "lat": -8.995453121645058,
+    "lon": -76.80292699001448,
+    "neighbors": [
+      "Antonio Raymondi",
+      "Carlos Fermin Fitzcarrald",
+      "Huari",
+      "Mariscal Luzuriaga",
+      "Huamalíes",
+      "Leoncio Prado",
+      "Marañón"
+    ]
+  },
+  {
+    "name": "Huamalíes",
+    "lat": -9.383461772528353,
+    "lon": -76.60159945314133,
+    "neighbors": [
+      "Bolognesi",
+      "Huari",
+      "Dos de Mayo",
+      "Huacaybamba",
+      "Leoncio Prado"
+    ]
+  },
+  {
+    "name": "Huenuco",
+    "lat": -9.765492938452036,
+    "lon": -76.18460535692883,
+    "neighbors": [
+      "Ambo",
+      "Dos de Mayo",
+      "Lauricocha",
+      "Leoncio Prado",
+      "Pachitea",
+      "Yarowilca"
+    ]
+  },
+  {
+    "name": "Lauricocha",
+    "lat": -10.182610721856177,
+    "lon": -76.71094874362835,
+    "neighbors": [
+      "Bolognesi",
+      "Ambo",
+      "Dos de Mayo",
+      "Huenuco",
+      "Yarowilca",
+      "Cajatambo",
+      "Oyon",
+      "Daniel Alcides Carrión"
+    ]
+  },
+  {
+    "name": "Leoncio Prado",
+    "lat": -9.058315368363202,
+    "lon": -76.02960338105322,
+    "neighbors": [
+      "Dos de Mayo",
+      "Huacaybamba",
+      "Huamalíes",
+      "Huenuco",
+      "Marañón",
+      "Pachitea",
+      "Puerto Inca",
+      "Ucayali",
+      "Bellavista",
+      "Tocache",
+      "Padre Abad"
+    ]
+  },
+  {
+    "name": "Marañón",
+    "lat": -8.720389088929444,
+    "lon": -76.69177755725799,
+    "neighbors": [
+      "Mariscal Luzuriaga",
+      "Pomabamba",
+      "Huacaybamba",
+      "Leoncio Prado",
+      "Pataz",
+      "Tocache"
+    ]
+  },
+  {
+    "name": "Pachitea",
+    "lat": -10.050484879215688,
+    "lon": -75.88896082732232,
+    "neighbors": [
+      "Ambo",
+      "Huenuco",
+      "Leoncio Prado",
+      "Puerto Inca",
+      "Oxapampa",
+      "Pasco"
+    ]
+  },
+  {
+    "name": "Puerto Inca",
+    "lat": -9.378253171445408,
+    "lon": -75.09177679125712,
+    "neighbors": [
+      "Leoncio Prado",
+      "Pachitea",
+      "Oxapampa",
+      "Coronel Portillo",
+      "Padre Abad"
+    ]
+  },
+  {
+    "name": "Yarowilca",
+    "lat": -9.796619955944402,
+    "lon": -76.60066664083335,
+    "neighbors": [
+      "Dos de Mayo",
+      "Huenuco",
+      "Lauricocha"
+    ]
+  },
+  {
+    "name": "Chincha",
+    "lat": -13.317756407967074,
+    "lon": -75.93964773234974,
+    "neighbors": [
+      "Castrovirreyna",
+      "Pisco",
+      "Cañete",
+      "Yauyos"
+    ]
+  },
+  {
+    "name": "Ica",
+    "lat": -14.299706459828236,
+    "lon": -75.6459564764508,
+    "neighbors": [
+      "Huaytara",
+      "Nazca",
+      "Palpa",
+      "Pisco"
+    ]
+  },
+  {
+    "name": "Nazca",
+    "lat": -14.940938872551369,
+    "lon": -75.0795642049344,
+    "neighbors": [
+      "Caravelí",
+      "Lucanas",
+      "Ica",
+      "Palpa"
+    ]
+  },
+  {
+    "name": "Palpa",
+    "lat": -14.370580561491263,
+    "lon": -75.17429628895276,
+    "neighbors": [
+      "Lucanas",
+      "Huaytara",
+      "Ica",
+      "Nazca"
+    ]
+  },
+  {
+    "name": "Pisco",
+    "lat": -13.804216485729027,
+    "lon": -75.94368703933735,
+    "neighbors": [
+      "Castrovirreyna",
+      "Huaytara",
+      "Chincha",
+      "Ica"
+    ]
+  },
+  {
+    "name": "Chanchamayo",
+    "lat": -11.02638449633409,
+    "lon": -75.13052354688303,
+    "neighbors": [
+      "Jauja",
+      "Satipo",
+      "Tarma",
+      "Oxapampa"
+    ]
+  },
+  {
+    "name": "Chupaca",
+    "lat": -12.207628375132021,
+    "lon": -75.43287129118023,
+    "neighbors": [
+      "Concepción",
+      "Huancayo",
+      "Yauyos"
+    ]
+  },
+  {
+    "name": "Concepción",
+    "lat": -11.76523512071066,
+    "lon": -75.12984016615037,
+    "neighbors": [
+      "Chupaca",
+      "Huancayo",
+      "Jauja",
+      "Satipo",
+      "Yauyos"
+    ]
+  },
+  {
+    "name": "Huancayo",
+    "lat": -12.094192064911343,
+    "lon": -75.0659159620489,
+    "neighbors": [
+      "Huancavelica",
+      "Tayacaja",
+      "Chupaca",
+      "Concepción",
+      "Satipo",
+      "Yauyos"
+    ]
+  },
+  {
+    "name": "Jauja",
+    "lat": -11.685242488813687,
+    "lon": -75.48804545147117,
+    "neighbors": [
+      "Chanchamayo",
+      "Concepción",
+      "Satipo",
+      "Tarma",
+      "Yauli",
+      "Huarochiri",
+      "Yauyos"
+    ]
+  },
+  {
+    "name": "Junín",
+    "lat": -11.035775632562666,
+    "lon": -75.93147185796497,
+    "neighbors": [
+      "Tarma",
+      "Yauli",
+      "Oxapampa",
+      "Pasco"
+    ]
+  },
+  {
+    "name": "Satipo",
+    "lat": -11.573239216129464,
+    "lon": -74.09643336954142,
+    "neighbors": [
+      "Huanta",
+      "La Convención",
+      "Tayacaja",
+      "Chanchamayo",
+      "Concepción",
+      "Huancayo",
+      "Jauja",
+      "Oxapampa",
+      "Atalaya"
+    ]
+  },
+  {
+    "name": "Tarma",
+    "lat": -11.280490890509112,
+    "lon": -75.68038368655664,
+    "neighbors": [
+      "Chanchamayo",
+      "Jauja",
+      "Junín",
+      "Yauli",
+      "Oxapampa"
+    ]
+  },
+  {
+    "name": "Yauli",
+    "lat": -11.49715694050297,
+    "lon": -76.12253623656217,
+    "neighbors": [
+      "Jauja",
+      "Junín",
+      "Tarma",
+      "Canta",
+      "Huaral",
+      "Huarochiri",
+      "Pasco"
+    ]
+  },
+  {
+    "name": "Ascope",
+    "lat": -7.724352837314919,
+    "lon": -79.15256668031341,
+    "neighbors": [
+      "Contumazá",
+      "Gran Chimú",
+      "Otuzco",
+      "Pacasmayo",
+      "Trujillo"
+    ]
+  },
+  {
+    "name": "Bolívar",
+    "lat": -7.277247003348892,
+    "lon": -77.73957843949378,
+    "neighbors": [
+      "Chachapoyas",
+      "Cajabamba",
+      "Celendín",
+      "San Marcos",
+      "Pataz",
+      "Sánchez Carrión",
+      "Mariscal Cáceres"
+    ]
+  },
+  {
+    "name": "Chepén",
+    "lat": -7.143749866492222,
+    "lon": -79.45738156076335,
+    "neighbors": [
+      "Contumazá",
+      "San Miguel",
+      "Pacasmayo",
+      "Chiclayo"
+    ]
+  },
+  {
+    "name": "Gran Chimú",
+    "lat": -7.579330153542446,
+    "lon": -78.64683174437475,
+    "neighbors": [
+      "Cajabamba",
+      "Cajamarca",
+      "Contumazá",
+      "Ascope",
+      "Otuzco"
+    ]
+  },
+  {
+    "name": "Julcan",
+    "lat": -8.172425034770118,
+    "lon": -78.46348411430199,
+    "neighbors": [
+      "Otuzco",
+      "Santiago de Chuco",
+      "Trujillo",
+      "Viru"
+    ]
+  },
+  {
+    "name": "Otuzco",
+    "lat": -7.842634278695651,
+    "lon": -78.5588159713187,
+    "neighbors": [
+      "Cajabamba",
+      "Ascope",
+      "Gran Chimú",
+      "Julcan",
+      "Sánchez Carrión",
+      "Santiago de Chuco",
+      "Trujillo"
+    ]
+  },
+  {
+    "name": "Pacasmayo",
+    "lat": -7.427515424590367,
+    "lon": -79.42624326774697,
+    "neighbors": [
+      "Contumazá",
+      "Ascope",
+      "Chepén"
+    ]
+  },
+  {
+    "name": "Pataz",
+    "lat": -8.142832166963046,
+    "lon": -77.3235217815752,
+    "neighbors": [
+      "Pallasca",
+      "Pomabamba",
+      "Sihuas",
+      "Marañón",
+      "Bolívar",
+      "Sánchez Carrión",
+      "Santiago de Chuco",
+      "Mariscal Cáceres",
+      "Tocache"
+    ]
+  },
+  {
+    "name": "Sánchez Carrión",
+    "lat": -7.789600893755755,
+    "lon": -77.90545862672225,
+    "neighbors": [
+      "Cajabamba",
+      "Bolívar",
+      "Otuzco",
+      "Pataz",
+      "Santiago de Chuco"
+    ]
+  },
+  {
+    "name": "Santiago de Chuco",
+    "lat": -8.17561962485008,
+    "lon": -78.13899842500506,
+    "neighbors": [
+      "Pallasca",
+      "Santa",
+      "Julcan",
+      "Otuzco",
+      "Pataz",
+      "Sánchez Carrión",
+      "Viru"
+    ]
+  },
+  {
+    "name": "Trujillo",
+    "lat": -8.065707788425607,
+    "lon": -78.90015200386686,
+    "neighbors": [
+      "Ascope",
+      "Julcan",
+      "Otuzco",
+      "Viru"
+    ]
+  },
+  {
+    "name": "Viru",
+    "lat": -8.523327247441612,
+    "lon": -78.6046083758461,
+    "neighbors": [
+      "Pallasca",
+      "Santa",
+      "Julcan",
+      "Santiago de Chuco",
+      "Trujillo"
+    ]
+  },
+  {
+    "name": "Chiclayo",
+    "lat": -6.811201638668232,
+    "lon": -79.55017971998842,
+    "neighbors": [
+      "Chota",
+      "San Miguel",
+      "Santa Cruz",
+      "Chepén",
+      "Ferreñafe",
+      "Lambayeque"
+    ]
+  },
+  {
+    "name": "Ferreñafe",
+    "lat": -6.390406960924702,
+    "lon": -79.5260227358014,
+    "neighbors": [
+      "Chota",
+      "Cutervo",
+      "Jaén",
+      "Chiclayo",
+      "Lambayeque"
+    ]
+  },
+  {
+    "name": "Lambayeque",
+    "lat": -6.188970476757738,
+    "lon": -79.97245431025951,
+    "neighbors": [
+      "Jaén",
+      "Chiclayo",
+      "Ferreñafe",
+      "Huancabamba",
+      "Morropón",
+      "Piura",
+      "Sechura"
+    ]
+  },
+  {
+    "name": "Barranca",
+    "lat": -10.66660669155694,
+    "lon": -77.65745542501836,
+    "neighbors": [
+      "Bolognesi",
+      "Huarmey",
+      "Ocros",
+      "Huaura"
+    ]
+  },
+  {
+    "name": "Cajatambo",
+    "lat": -10.515380709129971,
+    "lon": -77.03246453677919,
+    "neighbors": [
+      "Bolognesi",
+      "Ocros",
+      "Lauricocha",
+      "Huaura",
+      "Oyon"
+    ]
+  },
+  {
+    "name": "Cañete",
+    "lat": -12.793842619260964,
+    "lon": -76.35766348529363,
+    "neighbors": [
+      "Chincha",
+      "Huarochiri",
+      "Yauyos",
+      "Lima"
+    ]
+  },
+  {
+    "name": "Canta",
+    "lat": -11.540799399176496,
+    "lon": -76.709938869519,
+    "neighbors": [
+      "Yauli",
+      "Huaral",
+      "Huarochiri",
+      "Lima"
+    ]
+  },
+  {
+    "name": "Huaral",
+    "lat": -11.323064069672526,
+    "lon": -76.91388200949551,
+    "neighbors": [
+      "Yauli",
+      "Canta",
+      "Huaura",
+      "Lima",
+      "Pasco"
+    ]
+  },
+  {
+    "name": "Huarochiri",
+    "lat": -11.939743085561,
+    "lon": -76.42553710908027,
+    "neighbors": [
+      "Jauja",
+      "Yauli",
+      "Cañete",
+      "Canta",
+      "Yauyos",
+      "Lima"
+    ]
+  },
+  {
+    "name": "Huaura",
+    "lat": -11.034063340822142,
+    "lon": -77.23920465988569,
+    "neighbors": [
+      "Ocros",
+      "Barranca",
+      "Cajatambo",
+      "Huaral",
+      "Oyon",
+      "Pasco"
+    ]
+  },
+  {
+    "name": "Oyon",
+    "lat": -10.758724459729642,
+    "lon": -76.87647346702629,
+    "neighbors": [
+      "Lauricocha",
+      "Cajatambo",
+      "Huaura",
+      "Daniel Alcides Carrión",
+      "Pasco"
+    ]
+  },
+  {
+    "name": "Yauyos",
+    "lat": -12.512261850841897,
+    "lon": -75.90054552212679,
+    "neighbors": [
+      "Castrovirreyna",
+      "Huancavelica",
+      "Chincha",
+      "Chupaca",
+      "Concepción",
+      "Huancayo",
+      "Jauja",
+      "Cañete",
+      "Huarochiri"
+    ]
+  },
+  {
+    "name": "Lima",
+    "lat": -12.018026917797952,
+    "lon": -76.90478281363082,
+    "neighbors": [
+      "Callao",
+      "Cañete",
+      "Canta",
+      "Huaral",
+      "Huarochiri"
+    ]
+  },
+  {
+    "name": "Alto Amazonas",
+    "lat": -4.467861874707907,
+    "lon": -76.72656333221465,
+    "neighbors": [
+      "Bongará",
+      "Condorcanqui",
+      "Loreto",
+      "Requena",
+      "Lamas",
+      "Moyobamba",
+      "San Martín"
+    ]
+  },
+  {
+    "name": "Loreto",
+    "lat": -3.8591035776675318,
+    "lon": -75.22942887335122,
+    "neighbors": [
+      "Alto Amazonas",
+      "Maynas",
+      "Requena"
+    ]
+  },
+  {
+    "name": "Mariscal Ramón Castilla",
+    "lat": -3.8890527464323124,
+    "lon": -71.74067027779334,
+    "neighbors": [
+      "Maynas",
+      "Requena"
+    ]
+  },
+  {
+    "name": "Maynas",
+    "lat": -2.8500104809671902,
+    "lon": -73.48144054469037,
+    "neighbors": [
+      "Loreto",
+      "Mariscal Ramón Castilla",
+      "Requena"
+    ]
+  },
+  {
+    "name": "Requena",
+    "lat": -6.069361899937449,
+    "lon": -74.25476430682347,
+    "neighbors": [
+      "Alto Amazonas",
+      "Loreto",
+      "Mariscal Ramón Castilla",
+      "Maynas",
+      "Ucayali",
+      "San Martín",
+      "Coronel Portillo"
+    ]
+  },
+  {
+    "name": "Ucayali",
+    "lat": -7.293671572305996,
+    "lon": -75.38219446059836,
+    "neighbors": [
+      "Leoncio Prado",
+      "Requena",
+      "Bellavista",
+      "Picota",
+      "San Martín",
+      "Coronel Portillo",
+      "Padre Abad"
+    ]
+  },
+  {
+    "name": "Manu",
+    "lat": -12.266089351469038,
+    "lon": -71.29350539893787,
+    "neighbors": [
+      "Calca",
+      "La Convención",
+      "Paucartambo",
+      "Quispicanchi",
+      "Tambopata",
+      "Atalaya"
+    ]
+  },
+  {
+    "name": "Tahuamanu",
+    "lat": -11.14545105933198,
+    "lon": -70.3372452620362,
+    "neighbors": [
+      "Tambopata",
+      "Atalaya",
+      "Purús"
+    ]
+  },
+  {
+    "name": "Tambopata",
+    "lat": -12.208493938022267,
+    "lon": -70.04559795160237,
+    "neighbors": [
+      "Quispicanchi",
+      "Manu",
+      "Tahuamanu",
+      "Carabaya",
+      "Sandia",
+      "Atalaya"
+    ]
+  },
+  {
+    "name": "General Sánchez Cerro",
+    "lat": -16.45862028727126,
+    "lon": -70.83151824067782,
+    "neighbors": [
+      "Arequipa",
+      "Islay",
+      "Mariscal Nieto",
+      "Puno",
+      "San Román"
+    ]
+  },
+  {
+    "name": "Ilo",
+    "lat": -17.576310055089742,
+    "lon": -71.21191062028544,
+    "neighbors": [
+      "Islay",
+      "Mariscal Nieto",
+      "Jorge Basadre"
+    ]
+  },
+  {
+    "name": "Mariscal Nieto",
+    "lat": -17.01129652735594,
+    "lon": -70.78472806533196,
+    "neighbors": [
+      "Islay",
+      "General Sánchez Cerro",
+      "Ilo",
+      "El Collao",
+      "Puno",
+      "Candarave",
+      "Jorge Basadre"
+    ]
+  },
+  {
+    "name": "Daniel Alcides Carrión",
+    "lat": -10.508548423478725,
+    "lon": -76.48232632530461,
+    "neighbors": [
+      "Ambo",
+      "Lauricocha",
+      "Oyon",
+      "Pasco"
+    ]
+  },
+  {
+    "name": "Oxapampa",
+    "lat": -10.292156943354458,
+    "lon": -74.97991751058763,
+    "neighbors": [
+      "Pachitea",
+      "Puerto Inca",
+      "Chanchamayo",
+      "Junín",
+      "Satipo",
+      "Tarma",
+      "Pasco",
+      "Atalaya",
+      "Coronel Portillo"
+    ]
+  },
+  {
+    "name": "Pasco",
+    "lat": -10.74886490276781,
+    "lon": -76.14998564969292,
+    "neighbors": [
+      "Ambo",
+      "Pachitea",
+      "Junín",
+      "Yauli",
+      "Huaral",
+      "Huaura",
+      "Oyon",
+      "Daniel Alcides Carrión",
+      "Oxapampa"
+    ]
+  },
+  {
+    "name": "Ayabaca",
+    "lat": -4.714029220402166,
+    "lon": -79.81338956631265,
+    "neighbors": [
+      "Huancabamba",
+      "Morropón",
+      "Piura",
+      "Sullana"
+    ]
+  },
+  {
+    "name": "Huancabamba",
+    "lat": -5.442411420111676,
+    "lon": -79.51440755511767,
+    "neighbors": [
+      "Jaén",
+      "San Ignacio",
+      "Lambayeque",
+      "Ayabaca",
+      "Morropón"
+    ]
+  },
+  {
+    "name": "Morropón",
+    "lat": -5.256464822838332,
+    "lon": -79.98841797807808,
+    "neighbors": [
+      "Lambayeque",
+      "Ayabaca",
+      "Huancabamba",
+      "Piura"
+    ]
+  },
+  {
+    "name": "Paita",
+    "lat": -5.06289989535643,
+    "lon": -81.00551448964644,
+    "neighbors": [
+      "Piura",
+      "Sechura",
+      "Sullana",
+      "Talara"
+    ]
+  },
+  {
+    "name": "Piura",
+    "lat": -5.214345168944904,
+    "lon": -80.40248116706174,
+    "neighbors": [
+      "Lambayeque",
+      "Ayabaca",
+      "Morropón",
+      "Paita",
+      "Sechura",
+      "Sullana"
+    ]
+  },
+  {
+    "name": "Sechura",
+    "lat": -5.873492070046703,
+    "lon": -80.67396357523094,
+    "neighbors": [
+      "Lambayeque",
+      "Paita",
+      "Piura"
+    ]
+  },
+  {
+    "name": "Sullana",
+    "lat": -4.582039714942457,
+    "lon": -80.63703635789051,
+    "neighbors": [
+      "Ayabaca",
+      "Paita",
+      "Piura",
+      "Talara",
+      "Contralmirante Villar",
+      "Tumbes"
+    ]
+  },
+  {
+    "name": "Talara",
+    "lat": -4.486542949481772,
+    "lon": -81.08082655760978,
+    "neighbors": [
+      "Paita",
+      "Sullana",
+      "Contralmirante Villar"
+    ]
+  },
+  {
+    "name": "Azángaro",
+    "lat": -14.817713842506523,
+    "lon": -70.14350123113132,
+    "neighbors": [
+      "Carabaya",
+      "Huancane",
+      "Lampa",
+      "Melgar",
+      "San Antonio de Putina",
+      "San Román"
+    ]
+  },
+  {
+    "name": "Carabaya",
+    "lat": -13.792832840112037,
+    "lon": -70.18116706552621,
+    "neighbors": [
+      "Canchis",
+      "Quispicanchi",
+      "Tambopata",
+      "Azángaro",
+      "Melgar",
+      "San Antonio de Putina",
+      "Sandia"
+    ]
+  },
+  {
+    "name": "Chucuíto",
+    "lat": -16.60529183811541,
+    "lon": -69.3579003032581,
+    "neighbors": [
+      "El Collao",
+      "Lago Titicaca",
+      "Yunguyo"
+    ]
+  },
+  {
+    "name": "El Collao",
+    "lat": -16.72642614214276,
+    "lon": -69.75535816967883,
+    "neighbors": [
+      "Mariscal Nieto",
+      "Chucuíto",
+      "Lago Titicaca",
+      "Puno",
+      "Candarave",
+      "Tarata"
+    ]
+  },
+  {
+    "name": "Huancane",
+    "lat": -15.120981984568054,
+    "lon": -69.60797899246501,
+    "neighbors": [
+      "Azángaro",
+      "Lago Titicaca",
+      "Moho",
+      "Puno",
+      "San Antonio de Putina",
+      "San Román"
+    ]
+  },
+  {
+    "name": "Lago Titicaca",
+    "lat": -15.79230142622793,
+    "lon": -69.53549573159326,
+    "neighbors": [
+      "Chucuíto",
+      "El Collao",
+      "Huancane",
+      "Moho",
+      "Puno",
+      "Yunguyo"
+    ]
+  },
+  {
+    "name": "Lampa",
+    "lat": -15.386932698329753,
+    "lon": -70.64004783337258,
+    "neighbors": [
+      "Caylloma",
+      "Espinar",
+      "Azángaro",
+      "Melgar",
+      "San Román"
+    ]
+  },
+  {
+    "name": "Melgar",
+    "lat": -14.596545787521109,
+    "lon": -70.68642568425024,
+    "neighbors": [
+      "Canas",
+      "Canchis",
+      "Espinar",
+      "Azángaro",
+      "Carabaya",
+      "Lampa"
+    ]
+  },
+  {
+    "name": "Moho",
+    "lat": -15.335433193793893,
+    "lon": -69.38009589166501,
+    "neighbors": [
+      "Huancane",
+      "Lago Titicaca"
+    ]
+  },
+  {
+    "name": "Puno",
+    "lat": -16.084674160707543,
+    "lon": -70.07889082442628,
+    "neighbors": [
+      "General Sánchez Cerro",
+      "Mariscal Nieto",
+      "El Collao",
+      "Huancane",
+      "Lago Titicaca",
+      "San Román"
+    ]
+  },
+  {
+    "name": "San Antonio de Putina",
+    "lat": -14.711663245737473,
+    "lon": -69.6168583434929,
+    "neighbors": [
+      "Azángaro",
+      "Carabaya",
+      "Huancane",
+      "Sandia"
+    ]
+  },
+  {
+    "name": "San Román",
+    "lat": -15.704346515508963,
+    "lon": -70.42560591328154,
+    "neighbors": [
+      "Arequipa",
+      "Caylloma",
+      "General Sánchez Cerro",
+      "Azángaro",
+      "Huancane",
+      "Lampa",
+      "Puno"
+    ]
+  },
+  {
+    "name": "Sandia",
+    "lat": -13.85804631681755,
+    "lon": -69.32447830340672,
+    "neighbors": [
+      "Tambopata",
+      "Carabaya",
+      "San Antonio de Putina"
+    ]
+  },
+  {
+    "name": "Yunguyo",
+    "lat": -16.295854978488894,
+    "lon": -69.07498312221094,
+    "neighbors": [
+      "Chucuíto",
+      "Lago Titicaca"
+    ]
+  },
+  {
+    "name": "Bellavista",
+    "lat": -7.639477019457324,
+    "lon": -76.31286273396888,
+    "neighbors": [
+      "Leoncio Prado",
+      "Ucayali",
+      "El Dorado",
+      "Huallaga",
+      "Mariscal Cáceres",
+      "Picota",
+      "Tocache"
+    ]
+  },
+  {
+    "name": "El Dorado",
+    "lat": -6.560960939231059,
+    "lon": -76.7414301025073,
+    "neighbors": [
+      "Bellavista",
+      "Huallaga",
+      "Lamas",
+      "Moyobamba",
+      "Picota"
+    ]
+  },
+  {
+    "name": "Huallaga",
+    "lat": -6.766711785608781,
+    "lon": -76.89432177561689,
+    "neighbors": [
+      "Rodríguez de Mendoza",
+      "Bellavista",
+      "El Dorado",
+      "Mariscal Cáceres",
+      "Moyobamba"
+    ]
+  },
+  {
+    "name": "Lamas",
+    "lat": -6.26746050788593,
+    "lon": -76.43956047397646,
+    "neighbors": [
+      "Alto Amazonas",
+      "El Dorado",
+      "Moyobamba",
+      "Picota",
+      "San Martín"
+    ]
+  },
+  {
+    "name": "Mariscal Cáceres",
+    "lat": -7.278527872517984,
+    "lon": -77.1697852208868,
+    "neighbors": [
+      "Chachapoyas",
+      "Rodríguez de Mendoza",
+      "Bolívar",
+      "Pataz",
+      "Bellavista",
+      "Huallaga",
+      "Tocache"
+    ]
+  },
+  {
+    "name": "Moyobamba",
+    "lat": -5.865894761229157,
+    "lon": -77.15074505054801,
+    "neighbors": [
+      "Bongará",
+      "Rodríguez de Mendoza",
+      "Alto Amazonas",
+      "El Dorado",
+      "Huallaga",
+      "Lamas",
+      "Rioja"
+    ]
+  },
+  {
+    "name": "Picota",
+    "lat": -6.905897341269573,
+    "lon": -76.25128651207785,
+    "neighbors": [
+      "Ucayali",
+      "Bellavista",
+      "El Dorado",
+      "Lamas",
+      "San Martín"
+    ]
+  },
+  {
+    "name": "Rioja",
+    "lat": -5.864609051359756,
+    "lon": -77.46114177337597,
+    "neighbors": [
+      "Bongará",
+      "Chachapoyas",
+      "Rodríguez de Mendoza",
+      "Moyobamba"
+    ]
+  },
+  {
+    "name": "San Martín",
+    "lat": -6.4953302014524805,
+    "lon": -75.90265470923713,
+    "neighbors": [
+      "Alto Amazonas",
+      "Requena",
+      "Ucayali",
+      "Lamas",
+      "Picota"
+    ]
+  },
+  {
+    "name": "Tocache",
+    "lat": -8.249047954120282,
+    "lon": -76.63661335891354,
+    "neighbors": [
+      "Leoncio Prado",
+      "Marañón",
+      "Pataz",
+      "Bellavista",
+      "Mariscal Cáceres"
+    ]
+  },
+  {
+    "name": "Candarave",
+    "lat": -17.113985550243143,
+    "lon": -70.30252982419572,
+    "neighbors": [
+      "Mariscal Nieto",
+      "El Collao",
+      "Jorge Basadre",
+      "Tacna",
+      "Tarata"
+    ]
+  },
+  {
+    "name": "Jorge Basadre",
+    "lat": -17.58080259633434,
+    "lon": -70.73236356788658,
+    "neighbors": [
+      "Ilo",
+      "Mariscal Nieto",
+      "Candarave",
+      "Tacna"
+    ]
+  },
+  {
+    "name": "Tacna",
+    "lat": -17.893166537886476,
+    "lon": -70.22484329134795,
+    "neighbors": [
+      "Candarave",
+      "Jorge Basadre",
+      "Tarata"
+    ]
+  },
+  {
+    "name": "Tarata",
+    "lat": -17.41895205026801,
+    "lon": -69.9728916094752,
+    "neighbors": [
+      "El Collao",
+      "Candarave",
+      "Tacna"
+    ]
+  },
+  {
+    "name": "Contralmirante Villar",
+    "lat": -3.9699942258832626,
+    "lon": -80.74085731170779,
+    "neighbors": [
+      "Sullana",
+      "Talara",
+      "Tumbes"
+    ]
+  },
+  {
+    "name": "Tumbes",
+    "lat": -3.804711868563718,
+    "lon": -80.43086508134205,
+    "neighbors": [
+      "Sullana",
+      "Contralmirante Villar",
+      "Zarumilla"
+    ]
+  },
+  {
+    "name": "Zarumilla",
+    "lat": -3.658708136639262,
+    "lon": -80.25406709609844,
+    "neighbors": [
+      "Tumbes"
+    ]
+  },
+  {
+    "name": "Atalaya",
+    "lat": -10.398451661685794,
+    "lon": -73.2201098099733,
+    "neighbors": [
+      "La Convención",
+      "Satipo",
+      "Manu",
+      "Tahuamanu",
+      "Tambopata",
+      "Oxapampa",
+      "Coronel Portillo",
+      "Purús"
+    ]
+  },
+  {
+    "name": "Coronel Portillo",
+    "lat": -8.69374176839735,
+    "lon": -74.05752846791682,
+    "neighbors": [
+      "Puerto Inca",
+      "Requena",
+      "Ucayali",
+      "Oxapampa",
+      "Atalaya",
+      "Padre Abad"
+    ]
+  },
+  {
+    "name": "Padre Abad",
+    "lat": -8.795621700998502,
+    "lon": -75.43939585113651,
+    "neighbors": [
+      "Leoncio Prado",
+      "Puerto Inca",
+      "Ucayali",
+      "Coronel Portillo"
+    ]
+  },
+  {
+    "name": "Purús",
+    "lat": -10.379024747691998,
+    "lon": -71.59426134205258,
+    "neighbors": [
+      "Tahuamanu",
+      "Atalaya"
+    ]
+  }
+]
