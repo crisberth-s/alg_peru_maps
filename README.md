@@ -106,7 +106,11 @@ Esto evita descargas repetidas y acelera ejecuciones posteriores.
 
 # 📸 Captura de pantalla
 
-*(Agregar aquí una imagen del dashboard mostrando múltiples rutas y métricas.)*
+![Imagen del proyecto](images/image3.png)
+
+![Imagen del proyecto](images/image.png)
+
+![Imagen del proyecto](images/image2.png)
 
 ---
 
@@ -130,7 +134,7 @@ Sin API Key el mapa no se visualizará, aunque los algoritmos seguirán funciona
 # 📥 Clonar el repositorio
 
 ```bash
-git clone https://github.com/tuusuario/peru-route-lab.git
+git clone https://github.com/crisberth-s/alg_peru_maps.git
 cd peru-route-lab
 ```
 
@@ -183,10 +187,14 @@ Flask inyecta automáticamente la clave al frontend usando Jinja2.
 
 ## ⚠️ Configuración recomendada en Google Cloud
 
-Si restringes dominios agrega:
+Si restringes dominios agrega y para ver las estadisticas:
 
 ```text
 http://localhost:5000/*
+```
+
+```estadisticas
+http://localhost:5000/stats
 ```
 
 Debes tener habilitadas:
@@ -196,34 +204,6 @@ Debes tener habilitadas:
 
 ---
 
-# 🗺 Generar el grafo completo de provincias
-
-El archivo:
-
-```text
-data/provincias.json
-```
-
-incluye un ejemplo reducido.
-
-Para generar las 196 provincias reales:
-
-1. Descarga un shapefile o GeoJSON oficial del Perú.
-2. Ejecuta:
-
-```bash
-python generar_provincias.py
-```
-
-Esto generará automáticamente:
-
-```text
-data/provincias.json
-```
-
-con provincias y vecinos calculados automáticamente.
-
----
 
 # ▶️ Ejecutar el servidor
 
@@ -242,7 +222,9 @@ Abrir:
 ```text
 http://localhost:5000
 ```
-
+```estadisticas
+http://localhost:5000/stats
+```
 ---
 
 # 🧭 Guía de uso
@@ -399,10 +381,24 @@ Opciones recomendadas:
 
 # 📜 Licencia
 
-Proyecto académico bajo licencia MIT.
+Este proyecto está distribuido bajo la licencia MIT.  
+Puedes usar, modificar y distribuir el código respetando los términos de dicha licencia.
 
 ---
 
 # 👨‍💻 Autor
 
-Proyecto desarrollado para investigación, visualización y comparación avanzada de algoritmos de búsqueda y optimización sobre mapas del Perú.
+Desarrollado por **Crisberth**.
+
+Proyecto académico orientado a la investigación, visualización y comparación de algoritmos de búsqueda, optimización y rutas aplicados sobre mapas del Perú.
+
+Incluye implementación y análisis de algoritmos como:
+
+- Dijkstra
+- A*
+- BFS
+- DFS
+- Algoritmos Genéticos
+- Algoritmos Voraces (Greedy)
+
+con enfoque en visualización interactiva, análisis de rendimiento y representación geográfica.

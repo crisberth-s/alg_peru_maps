@@ -7,7 +7,4 @@ class Config:
     OSMNX_TIMEOUT = 300
 
     # ⚠️ PON AQUÍ TU API KEY DE GOOGLE MAPS
-    GMAPS_KEY = "aqui tu api key"
-
-
-    
+    GMAPS_KEY = "AIzaSyDEzS2sfCiE8FmJKdeU7b4GBVCP4iFzhro"

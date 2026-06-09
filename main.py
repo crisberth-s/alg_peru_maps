@@ -1,6 +1,7 @@
 import os
 import json
 import logging
+import datetime
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from config import Config
@@ -91,6 +92,21 @@ def compare_routes():
             if 'path' in res and res['path']:
                 res['coordinates'] = [list(PROVINCE_COORDS[node]) for node in res['path']]
 
+        # --- Guardar comparación (modo provincias) ---
+        stats_dir = 'estadisticas'
+        os.makedirs(stats_dir, exist_ok=True)
+        filename = f"comp_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S_%f')}.json"
+        filepath = os.path.join(stats_dir, filename)
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump({
+                "fecha": datetime.datetime.now().isoformat(),
+                "modo": mode,
+                "origen": origin_name,
+                "destino": dest_name,
+                "algoritmos": results
+            }, f, ensure_ascii=False, indent=2)
+        # --- Fin guardado ---
+
         return jsonify({
             'success': True,
             'algorithms': results,
@@ -130,12 +146,44 @@ def compare_routes():
             if 'path' in res and res['path']:
                 res['coordinates'] = path_to_coordinates(G, res['path'])
 
+        # --- Guardar comparación (modo OSM) ---
+        stats_dir = 'estadisticas'
+        os.makedirs(stats_dir, exist_ok=True)
+        filename = f"comp_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S_%f')}.json"
+        filepath = os.path.join(stats_dir, filename)
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump({
+                "fecha": datetime.datetime.now().isoformat(),
+                "modo": mode,
+                "origen": data.get('origin_name', ''),
+                "destino": data.get('dest_name', ''),
+                "algoritmos": results
+            }, f, ensure_ascii=False, indent=2)
+        # --- Fin guardado ---
+
         return jsonify({
             'success': True,
             'algorithms': results,
             'origin_name': data.get('origin_name', ''),
             'dest_name': data.get('dest_name', '')
         })
+
+# ==================== ESTADÍSTICAS ====================
+@app.route('/api/stats')
+def get_stats():
+    stats_dir = 'estadisticas'
+    if not os.path.exists(stats_dir):
+        return jsonify([])
+    files = [f for f in os.listdir(stats_dir) if f.endswith('.json')]
+    all_data = []
+    for fname in sorted(files, reverse=True):    # más reciente primero
+        with open(os.path.join(stats_dir, fname), 'r', encoding='utf-8') as f:
+            all_data.append(json.load(f))
+    return jsonify(all_data)
+
+@app.route('/stats')
+def stats_page():
+    return render_template('stats.html')
 
 if __name__ == '__main__':
     os.makedirs(Config.CACHE_DIR, exist_ok=True)
